@@ -168,6 +168,8 @@ private:
 	*/
 	int login();
 
+	void* parseResponse(int request, int* status, EthernetClient &client);
+
 	/**
 	* @fn	void CommonSense::writeToClient(const __FlashStringHelper *str, EthernetClient &client)
 	*
@@ -195,6 +197,8 @@ private:
 	* @param [in]	client	The client.
 	*/
 	void writeToClient(char *str, EthernetClient &client);
+
+	int writeHeadersToClient(EthernetClient &client, int length, bool sessionRequired);
 };
 
 static const char server[] = "api.sense-os.nl";

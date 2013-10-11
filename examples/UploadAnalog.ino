@@ -30,7 +30,7 @@ void loop(){
 	Serial.print(F("Time: "));
 	Serial.println(sense.time());
 
-	sense.uploadData(banaan,analogRead(0), sense.now());
+	sense.uploadData(banaan,analogRead(0), sense.time());
 	//sense.deleteSensor(banaan); // Deleting a sensor will also delete all it's data!
 
 	Serial.println();
