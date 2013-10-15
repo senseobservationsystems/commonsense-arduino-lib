@@ -1,11 +1,6 @@
-#include <Arduino.h>
-#include <avr/pgmspace.h>
-#include <SPI.h>
-#include <Ethernet.h>
-#include <EthernetUdp.h>
 #include "CommonSense.h"
 
-CommonSense::CommonSense(const char *username, const char *password, const char *deviceName, const byte *MAC) : username_(username), password_(password), deviceName_(deviceName), MAC_(MAC){ 
+CommonSense::CommonSense(const char *username, const char *password, const char *deviceName, const byte *MAC) : username_(username), password_(password), deviceName_(deviceName), MAC_(MAC), timeServer(132, 163, 4, 101), NTP_PACKET_SIZE(48){ 
 
 }
 
@@ -510,7 +505,7 @@ unsigned long CommonSense::time(){
 	return NTPTime + (millis()/1000) - timeSinceStart;
 }
 
-int setupTime(){
+int CommonSense::setupTime(){
 	Udp.begin(8888u);
 
 	NTPTime = getNtpTime();
@@ -519,8 +514,10 @@ int setupTime(){
 	return 0;
 }
 
-unsigned long getNtpTime() //from UdpNtpClient example
+unsigned long CommonSense::getNtpTime() //from UdpNtpClient example
 {
+	byte packetBuffer[NTP_PACKET_SIZE];
+	memset(packetBuffer, 0, NTP_PACKET_SIZE);
 	sendNTPpacket(timeServer);
 
 	delay(1000);
@@ -539,9 +536,10 @@ unsigned long getNtpTime() //from UdpNtpClient example
 	return 0; //return if unsuccessful
 }
 
-void sendNTPpacket(IPAddress &address)// From Time example TimeNTP
+void CommonSense::sendNTPpacket(IPAddress &address)// From Time example TimeNTP
 	// send an NTP request to the time server at the given address
 {
+	byte packetBuffer[NTP_PACKET_SIZE];
 	// set all bytes in the buffer to 0
 	memset(packetBuffer, 0, NTP_PACKET_SIZE);
 	// Initialize values needed to form NTP request

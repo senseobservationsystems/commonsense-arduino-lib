@@ -1,7 +1,6 @@
 #ifndef COMMONSENSE_H
 #define COMMONSENSE_H
 
-#include <Arduino.h>
 #include <avr/pgmspace.h>
 #include <SPI.h>
 #include <Ethernet.h>
@@ -156,6 +155,14 @@ private:
 
 	char sessionId_[28];
 
+	EthernetUDP Udp;
+	IPAddress timeServer;
+
+	const int NTP_PACKET_SIZE;
+
+	unsigned long timeSinceStart;
+	unsigned long NTPTime;
+
 	/**
 	* @fn	int CommonSense::login()
 	*
@@ -199,53 +206,45 @@ private:
 	void writeToClient(char *str, EthernetClient &client);
 
 	int writeHeadersToClient(EthernetClient &client, int length, bool sessionRequired);
+
+
+	/**
+	* @fn	int setupTime()
+	*
+	* @brief	Sets up the UDP connection and calls setTime(getNtpTime).
+	*
+	* @author	Miguel
+	* @date	01/10/2013
+	*
+	* @return	The current time after setup.
+	*/
+	int setupTime();
+
+	/**
+	* @fn	void sendNTPpacket(IPAddress &address)
+	*
+	* @brief	Sends a NTP packet containing a NTP request.
+	*
+	* @author	Miguel
+	* @date	01/10/2013
+	*
+	* @param [in]	address	The IP address of a NTP server.
+	*/
+	void sendNTPpacket(IPAddress &address);
+
+	/**
+	* @fn	time_t getNtpTime()
+	*
+	* @brief	Gets the current NTP time by using the sendNTPpacket() function.
+	*
+	* @author	Miguel
+	* @date	01/10/2013
+	*
+	* @return	The synchronised time adjusted to Unix epoch.
+	*/
+	unsigned long getNtpTime();
 };
 
 static const char server[] = "api.sense-os.nl";
-
-static EthernetUDP Udp;
-static IPAddress timeServer(132, 163, 4, 101);
-
-static const int NTP_PACKET_SIZE = 48;
-static byte packetBuffer[NTP_PACKET_SIZE];
-
-static unsigned long timeSinceStart;
-static unsigned long NTPTime;
-
-/**
-* @fn	int setupTime()
-*
-* @brief	Sets up the UDP connection and calls setTime(getNtpTime).
-*
-* @author	Miguel
-* @date	01/10/2013
-*
-* @return	The current time after setup.
-*/
-int setupTime();
-
-/**
-* @fn	void sendNTPpacket(IPAddress &address)
-*
-* @brief	Sends a NTP packet containing a NTP request.
-*
-* @author	Miguel
-* @date	01/10/2013
-*
-* @param [in]	address	The IP address of a NTP server.
-*/
-void sendNTPpacket(IPAddress &address);
-
-/**
-* @fn	time_t getNtpTime()
-*
-* @brief	Gets the current NTP time by using the sendNTPpacket() function.
-*
-* @author	Miguel
-* @date	01/10/2013
-*
-* @return	The synchronised time adjusted to Unix epoch.
-*/
-unsigned long getNtpTime();
 
 #endif
