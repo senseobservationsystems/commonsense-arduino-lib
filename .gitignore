@@ -2,8 +2,6 @@
 *.sln
 *.vcxproj
 *.vcxproj.filters
-/Doxyfile
-/README_doxygen.md
 Debug/
 Visual Micro/
 html/

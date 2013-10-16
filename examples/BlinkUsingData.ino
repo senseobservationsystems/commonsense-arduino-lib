@@ -30,13 +30,9 @@ Connecting the wrong legs shouldn't damage the LED as long as you use a resistor
 If the LED doesn't light up, you probably connected it the wrong way.
 */
 
-#include <Arduino.h>
-#include <avr/pgmspace.h>
-#include <SPI.h>
-#include <Ethernet.h>
-#include <EthernetUdp.h>
-#include <Time.h>
-#include <CommonSense.h>
+#include <SPI.h> // Library used by the CommonSense library
+#include <Ethernet.h> // Library used by the CommonSense library 
+#include <CommonSense.h> // Our library itself
 
 //user vars
 const char *username = ""; //Required: Your CommonSense username

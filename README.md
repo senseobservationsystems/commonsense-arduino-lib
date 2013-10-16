@@ -14,7 +14,9 @@ Sketch examples are included with this library. You can select one from **File >
 Let's get started by including the CommonSense library. This will also include arduino core dependencies:
 
 ```c
-#include <CommonSense.h>
+#include <SPI.h> // Library used by the CommonSense library
+#include <Ethernet.h> // Library used by the CommonSense library 
+#include <CommonSense.h> // Our library itself
 ```
 
 We will need some information to connect and logon to CommonSense:
