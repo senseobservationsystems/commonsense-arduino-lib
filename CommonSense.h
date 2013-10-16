@@ -65,18 +65,20 @@ public:
 	long createSensor(char *displayName, char *deviceType, char *name);
 
 	/**
-	* @fn	int CommonSense::uploadData(const long sensorId, const int value)
-	*
-	* @brief	Uploads a value for this data point using the current time.
-	*
-	* @author	Miguel
-	* @date	01/10/2013
-	*
-	* @param	sensorId	Identifier of the sensor to store data in.
-	* @param	value   	The value for this data point.
-	*
-	* @return	The response status code from the API. In case of connection failure, 1 is returned.
-	*/
+	 * @fn	int CommonSense::uploadData(const long sensorId, const int value, unsigned long time);
+	 *
+	 * @brief	Uploads a value for this data point using the current time.
+	 *
+	 * @author	Miguel
+	 * @date	01/10/2013
+	 *
+	 * @param	sensorId	Identifier of the sensor to store data in.
+	 * @param	value   	The value for this data point.
+	 * @param	time		The unix timestamp of this data point.
+	 *
+	 * @return	The response status code from the API. In case of connection failure, 1 is returned.
+	 */
+
 	int uploadData(const long sensorId, const int value, unsigned long time); 
 
 	/**
@@ -107,6 +109,17 @@ public:
 	* @return	The response status code from the API. In case of connection failure, 1 is returned.
 	*/
 	int deleteSensor(long sensorId);
+
+	/**
+	 * @fn	unsigned long CommonSense::time();
+	 *
+	 * @brief	Gets the current unix time. This format is used for dates in the CommonSense platform.
+	 *
+	 * @author	Miguel
+	 * @date	16/10/2013
+	 *
+	 * @return	The amount of seconds since 00:00:00 UTC, 1 January 1970
+	 */
 
 	unsigned long time();
 
