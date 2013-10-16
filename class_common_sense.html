@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,6 +115,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae6d46bdc0676f820e8b6c35894a92521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the sensor with sensorId.  <a href="#ae6d46bdc0676f820e8b6c35894a92521">More...</a><br/></td></tr>
 <tr class="separator:ae6d46bdc0676f820e8b6c35894a92521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e670fe8cd2a2d03d5ad9816fd4bb97"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a19e670fe8cd2a2d03d5ad9816fd4bb97">time</a> ()</td></tr>
+<tr class="memdesc:a19e670fe8cd2a2d03d5ad9816fd4bb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current unix time. This format is used for dates in the <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> platform.  <a href="#a19e670fe8cd2a2d03d5ad9816fd4bb97">More...</a><br/></td></tr>
 <tr class="separator:a19e670fe8cd2a2d03d5ad9816fd4bb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830af1d027b84f51f02b503cec7e7ee0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a830af1d027b84f51f02b503cec7e7ee0">sessionId</a> () const </td></tr>
 <tr class="memdesc:a830af1d027b84f51f02b503cec7e7ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the sessionId_ in this object.  <a href="#a830af1d027b84f51f02b503cec7e7ee0">More...</a><br/></td></tr>
@@ -125,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Class containing variables and functions required for interacting with <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>01/10/2013 </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8h_source.html#l00018">18</a> of file <a class="el" href="_common_sense_8h_source.html">CommonSense.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6469f195c8204ef8099ba9e58c12bea3"></a>
 <div class="memitem">
@@ -175,6 +177,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00003">3</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -195,6 +199,8 @@ Public Member Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>01/10/2013</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The response code from CommonSense::login(). </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00007">7</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,6 +247,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new sensor id if created successfully or the response status. In case of connection failure, 1 is returned. </dd></dl>
 
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00108">108</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae6d46bdc0676f820e8b6c35894a92521"></a>
@@ -267,6 +275,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The response status code from the API. In case of connection failure, 1 is returned. </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00183">183</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
@@ -295,6 +305,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The last data. </dd></dl>
 
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00295">295</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a830af1d027b84f51f02b503cec7e7ee0"></a>
@@ -315,6 +327,8 @@ Public Member Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>01/10/2013</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A copy of the sessionId_ in this object. </dd></dl>
 
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00385">385</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a19e670fe8cd2a2d03d5ad9816fd4bb97"></a>
@@ -329,6 +343,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the current unix time. This format is used for dates in the <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> platform. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16/10/2013</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The amount of seconds since 00:00:00 UTC, 1 January 1970 </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00504">504</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
@@ -368,22 +389,25 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sensorId</td><td>Identifier of the sensor to store data in. </td></tr>
-    <tr><td class="paramname">value</td><td>The value for this data point.</td></tr>
+    <tr><td class="paramname">value</td><td>The value for this data point. </td></tr>
+    <tr><td class="paramname">time</td><td>The unix timestamp of this data point.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The response status code from the API. In case of connection failure, 1 is returned. </dd></dl>
 
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00239">239</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_common_sense_8h_source.html">CommonSense.h</a></li>
-<li><a class="el" href="_common_sense_8cpp.html">CommonSense.cpp</a></li>
+<li><a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2013 15:37:17 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 16 2013 12:17:17 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
