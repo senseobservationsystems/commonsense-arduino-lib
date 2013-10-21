@@ -1,5 +1,9 @@
 ##Installation##
-The Arduino IDE has a built-in function for installing libraries. Go to **Sketch > Import Library... > Add Library...** and select the zip file or folder containing the library.
+The Arduino IDE has a built-in function for installing libraries.
+
+Download the library as a zip file and extract it. Rename the resulting 'commonsense-arduino-lib-master' folder to 'CommonSense'.
+
+Go to **Sketch > Import Library... > Add Library...** and select the folder containing the library.
 
 If you're not using the Arduino Development Environment make sure the files are in a folder named 'CommonSense' and place the folder in your libraries folder.
 
@@ -11,7 +15,7 @@ The API methods available to developers can be found on the [CommonSense Develop
 Sketch examples are included with this library. You can select one from **File > Examples > CommonSense**.
 
 ##Usage##
-Let's get started by including the CommonSense library. This will also include arduino core dependencies:
+Let's get started by including the CommonSense library and its dependencies:
 
 ~~~{.c}
 #include <SPI.h> // Library used by the CommonSense library
