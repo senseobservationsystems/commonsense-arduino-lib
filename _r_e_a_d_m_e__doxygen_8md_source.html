@@ -84,79 +84,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">##Installation##</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span>The Arduino IDE has a built-in <span class="keyword">function</span> <span class="keywordflow">for</span> installing libraries. Go to **Sketch &gt; Import Library... &gt; Add Library...** and select the zip file or folder containing the library.</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span>The Arduino IDE has a built-in <span class="keyword">function</span> <span class="keywordflow">for</span> installing libraries.</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;If you<span class="stringliteral">&#39;re not using the Arduino Development Environment make sure the files are in a folder named &#39;</span><a class="code" href="class_common_sense.html">CommonSense</a><span class="stringliteral">&#39; and place the folder in your libraries folder.</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">##Reference Documentation##</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">Have a look at the [library documentation](http://senseobservationsystems.github.com/commonsense-arduino-lib/) for more information.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">The API methods available to developers can be found on the [CommonSense Developers Pages](http://www.sense-os.nl/developers).</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;Download the library as a zip file and extract it. Rename the resulting <span class="stringliteral">&#39;commonsense-arduino-lib-master&#39;</span> folder to <span class="stringliteral">&#39;CommonSense&#39;</span>.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;Go to **Sketch &gt; Import Library... &gt; Add Library...** and select the folder containing the library.</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;If you<span class="stringliteral">&#39;re not using the Arduino Development Environment make sure the files are in a folder named &#39;</span><a class="code" href="class_common_sense.html">CommonSense</a><span class="stringliteral">&#39; and place the folder in your libraries folder.</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">##Examples##</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">Sketch examples are included with this library. You can select one from **File &gt; Examples &gt; CommonSense**.</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">##Usage##</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">Let&#39;</span>s <span class="keyword">get</span> started by including the <a class="code" href="class_common_sense.html">CommonSense</a> library. This will also include arduino core dependencies:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;~~~{.c}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;SPI.h&gt;</span> <span class="comment">// Library used by the CommonSense library</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;Ethernet.h&gt;</span> <span class="comment">// Library used by the CommonSense library </span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;CommonSense.h&gt;</span> <span class="comment">// Our library itself</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;~~~</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;We will need some information to connect and logon to <a class="code" href="class_common_sense.html">CommonSense</a>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;~~~{.c}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *username = <span class="stringliteral">&quot;test&quot;</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *password = <span class="stringliteral">&quot;098f6bcd4621d373cade4e832627b4f6&quot;</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *deviceName = <span class="stringliteral">&quot;Arduino Uno&quot;</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">const</span> byte MAC[] = { 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF };</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;~~~</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;We will also need to store the sensor identifier:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;~~~{.c}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">long</span> pressure;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;~~~</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">##Reference Documentation##</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">Have a look at the [library documentation](http://senseobservationsystems.github.com/commonsense-arduino-lib/) for more information.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">The API methods available to developers can be found on the [CommonSense Developers Pages](http://www.sense-os.nl/developers).</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">##Examples##</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">Sketch examples are included with this library. You can select one from **File &gt; Examples &gt; CommonSense**.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">##Usage##</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">Let&#39;</span>s <span class="keyword">get</span> started by including the <a class="code" href="class_common_sense.html">CommonSense</a> library and its dependencies:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;~~~{.c}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;SPI.h&gt;</span> <span class="comment">// Library used by the CommonSense library</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;Ethernet.h&gt;</span> <span class="comment">// Library used by the CommonSense library </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;CommonSense.h&gt;</span> <span class="comment">// Our library itself</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;~~~</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;We will need some information to connect and logon to <a class="code" href="class_common_sense.html">CommonSense</a>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;~~~{.c}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *username = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *password = <span class="stringliteral">&quot;098f6bcd4621d373cade4e832627b4f6&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *deviceName = <span class="stringliteral">&quot;Arduino Uno&quot;</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">const</span> byte MAC[] = { 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;~~~</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;We will also need to store the sensor identifier:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;Now it<span class="stringliteral">&#39;s time to create an object so we can talk to CommonSense:</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral">~~~{.c}</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="stringliteral">CommonSense sense = CommonSense(username,password,deviceName,MAC);</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="stringliteral">~~~</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;~~~{.c}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">long</span> pressure;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;~~~</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;Now it<span class="stringliteral">&#39;s time to create an object so we can talk to CommonSense:</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral">Now that&#39;</span>s done, we should use <a class="code" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">CommonSense::begin</a>() inside the setup() of the sketch.</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;This function sets up ethernet and time to call <a class="code" href="class_common_sense.html">CommonSense</a>::login().</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;~~~{.c}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;sense.<a class="code" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">begin</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;~~~</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral">~~~{.c}</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral">CommonSense sense = CommonSense(username,password,deviceName,MAC);</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral">~~~</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="stringliteral">Now that&#39;</span>s done, we should use <a class="code" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">CommonSense::begin</a>() inside the setup() of the sketch.</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;This function sets up ethernet and time to call <a class="code" href="class_common_sense.html">CommonSense</a>::login().</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;With CommonSense::login() having saved the session <span class="keywordtype">id</span> within the <span class="keywordtype">object</span>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;we can create the sensors in our <a class="code" href="class_common_sense.html">CommonSense</a> account.</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;~~~{.c}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;pressure = sense.<a class="code" href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">createSensor</a>(<span class="stringliteral">&quot;Pressure&quot;</span>, <span class="stringliteral">&quot;P1 Pressure Sensor&quot;</span>, <span class="stringliteral">&quot;P1SEN&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;~~~</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;~~~{.c}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;sense.<a class="code" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">begin</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;~~~</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;With CommonSense::login() having saved the session <span class="keywordtype">id</span> within the <span class="keywordtype">object</span>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;we can create the sensors in our <a class="code" href="class_common_sense.html">CommonSense</a> account.</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;We got our sensors up, now it<span class="stringliteral">&#39;s time to acquire data and upload it.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral">~~~{.c}</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">sense.uploadData(pressure, analogRead(A0));</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral">~~~</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;~~~{.c}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;pressure = sense.<a class="code" href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">createSensor</a>(<span class="stringliteral">&quot;Pressure&quot;</span>, <span class="stringliteral">&quot;P1 Pressure Sensor&quot;</span>, <span class="stringliteral">&quot;P1SEN&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;~~~</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;We got our sensors up, now it<span class="stringliteral">&#39;s time to acquire data and upload it.</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">Your data should now be visible in the sensor library.</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral">##License##</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="stringliteral">Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">~~~{.c}</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral">sense.uploadData(pressure, analogRead(A0));</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral">~~~</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="stringliteral">Your data should now be visible in the sensor library.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral">##License##</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)</span></div>
 <div class="ttc" id="class_common_sense_html_a903d4f03f3480445f4ae7e11d1501849"><div class="ttname"><a href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">CommonSense::createSensor</a></div><div class="ttdeci">long createSensor(char *displayName, char *deviceType, char *name)</div><div class="ttdoc">Creates a sensor using the provided parameters. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00108">CommonSense.cpp:108</a></div></div>
 <div class="ttc" id="class_common_sense_html"><div class="ttname"><a href="class_common_sense.html">CommonSense</a></div><div class="ttdoc">Class containing variables and functions required for interacting with CommonSense. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8h_source.html#l00018">CommonSense.h:18</a></div></div>
 <div class="ttc" id="class_common_sense_html_a7b92851f07d8e3df557045a65f1ff359"><div class="ttname"><a href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">CommonSense::begin</a></div><div class="ttdeci">int begin()</div><div class="ttdoc">Sets up Ethernet, Time and calls CommonSense::login(). </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00007">CommonSense.cpp:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 16 2013 15:35:14 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 21 2013 10:30:26 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

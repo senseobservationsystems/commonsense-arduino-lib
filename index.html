@@ -78,14 +78,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">commonsense-arduino-lib Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The Arduino IDE has a built-in function for installing libraries. Go to <b>Sketch &gt; Import Library... &gt; Add Library...</b> and select the zip file or folder containing the library.</p>
+<div class="textblock"><p>The Arduino IDE has a built-in function for installing libraries.</p>
+<p>Download the library as a zip file and extract it. Rename the resulting 'commonsense-arduino-lib-master' folder to '<a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>'.</p>
+<p>Go to <b>Sketch &gt; Import Library... &gt; Add Library...</b> and select the folder containing the library.</p>
 <p>If you're not using the Arduino Development Environment make sure the files are in a folder named '<a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>' and place the folder in your libraries folder.</p>
 <h2>Reference Documentation</h2>
 <p>Have a look at the <a href="http://senseobservationsystems.github.com/commonsense-arduino-lib/">library documentation</a> for more information. The API methods available to developers can be found on the <a href="http://www.sense-os.nl/developers">CommonSense Developers Pages</a>.</p>
 <h2>Examples</h2>
 <p>Sketch examples are included with this library. You can select one from <b>File &gt; Examples &gt; <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a></b>.</p>
 <h2>Usage</h2>
-<p>Let's get started by including the <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> library. This will also include arduino core dependencies:</p>
+<p>Let's get started by including the <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> library and its dependencies:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SPI.h&gt;</span> <span class="comment">// Library used by the CommonSense library</span></div>
 <div class="line"><span class="preprocessor">#include &lt;Ethernet.h&gt;</span> <span class="comment">// Library used by the CommonSense library </span></div>
 <div class="line"><span class="preprocessor">#include &lt;CommonSense.h&gt;</span> <span class="comment">// Our library itself</span></div>
@@ -110,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 16 2013 15:35:14 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 21 2013 10:30:26 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
