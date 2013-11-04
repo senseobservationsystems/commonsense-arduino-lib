@@ -1,3 +1,5 @@
+#This branch uses a library specification for Arduino 1.5 posted [here](https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification). It is not set in stone and may not even be used for IDE 1.5#
+
 ##Installation##
 The Arduino IDE has a built-in function for installing libraries.  
 Download the library as a zip file and extract it. Rename the resulting 'commonsense-arduino-lib-master' folder to 'CommonSense'.  
@@ -13,57 +15,7 @@ The API methods available to developers can be found on the [CommonSense Develop
 Sketch examples are included with this library. You can select one from **File > Examples > CommonSense**.
 
 ##Usage##
-Let's get started by including the CommonSense library and its dependencies:
-
-```c
-#include <SPI.h> // Library used by the CommonSense library
-#include <Ethernet.h> // Library used by the CommonSense library 
-#include <CommonSense.h> // Our library itself
-```
-
-We will need some information to connect and logon to CommonSense:
-
-```c
-const char *username = "test";
-const char *password = "098f6bcd4621d373cade4e832627b4f6";
-const char *deviceName = "Arduino Uno";
-const byte MAC[] = { 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF };
-```
-
-We will also need to store the sensor identifier:
-
-```c
-long pressure;
-```
-
-Now it's time to create an object so we can talk to CommonSense:
-
-```c
-CommonSense sense = CommonSense(username,password,deviceName,MAC);
-```
-
-Now that's done, we should use CommonSense::begin() inside the setup() of the sketch.
-This function sets up ethernet and time to call CommonSense::login().
-
-```c
-sense.begin();
-```
-
-With CommonSense::login() having saved the session id within the object,
-we can create the sensors in our CommonSense account.
-
-```c
-pressure = sense.createSensor("Pressure", "P1 Pressure Sensor", "P1SEN");
-```
-
-We got our sensors up, now it's time to acquire data and upload it.
-
-```c
-sense.uploadData(pressure, analogRead(A0));
-```
-
-Your data should now be visible in the sensor library.
-
+A tutorial is available at the [CommonSense Developer Portal](http://developer.sense-os.nl/Devices/arduino/).
 
 ##License##
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
