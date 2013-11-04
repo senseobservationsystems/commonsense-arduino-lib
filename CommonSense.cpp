@@ -68,9 +68,9 @@ int16_t CommonSense::login(){
 	return -1;
 }
 
-int8_t CommonSense::createSensor(char *displayName, char *deviceType, char *name, uint8_t pin, int32_t *sensorArray, size_t arraySize){
+int8_t CommonSense::createSensor(char *displayName, char *deviceType, char *name, int8_t pin, int32_t *sensorArray, size_t arraySize){
 	int32_t newSensorId = 0;
-	uint8_t newPin = pin;
+	int8_t newPin = pin;
 	int8_t newSpace = -1;
 
 	if(debug > 0){Serial.println(F("createSensor()..."));}
@@ -121,7 +121,7 @@ int8_t CommonSense::createSensor(char *displayName, char *deviceType, char *name
 				Serial.print(F("] is now: "));
 				Serial.println(*(sensorArray+i));
 				Serial.print(F("sensors["));
-				Serial.print(i+1);
+				Serial.print((int8_t) (i+1));
 				Serial.print(F("] is now: "));
 				Serial.println(*(sensorArray+i+1));
 			}
@@ -337,7 +337,7 @@ int8_t CommonSense::loadSensorsFromEEPROM(int32_t *sensorArray, size_t arraySize
 			}
 			else{
 				if(0 != *(sensorArray+i))
-					Serial.println(*(sensorArray+i));
+					Serial.println((int8_t)*(sensorArray+i));
 			}
 		}
 
@@ -367,7 +367,7 @@ int8_t CommonSense::clearEEPROM(){
 	return 1;
 }
 
-bool CommonSense::EEPROMContainsPin(uint8_t pin){
+bool CommonSense::EEPROMContainsPin(int8_t pin){
 	for(uint16_t i = 0; i < EEPROM_MAX; i=i+4){
 		int8_t t = eeprom_read_dword((uint32_t*)i);
 		if(pin == t){

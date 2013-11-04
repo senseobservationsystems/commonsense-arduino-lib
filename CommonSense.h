@@ -88,7 +88,7 @@ public:
 	*
 	* @return	1 if the id and pin are successfully stored in the sensorArray and EEPROM.
 	*/
-	int8_t createSensor(char *displayName, char *deviceType, char *name, uint8_t pin, int32_t *sensorArray, size_t arraySize);
+	int8_t createSensor(char *displayName, char *deviceType, char *name, int8_t pin, int32_t *sensorArray, size_t arraySize);
 	/**
 	* @fn	int8_t CommonSense::deleteSensor(uint8_t elementNo, int32_t* sensorArray, size_t arraySize);
 	*
@@ -118,7 +118,7 @@ public:
 	* @param	value   	The value for this data point.
 	* @param	time		The unix timestamp of this data point.
 	*
-	* @return	The response status code from the API. In case of connection failure, 1 is returned.
+	* @return	1 if uploading the data was successful.
 	*/
 	int8_t uploadData(const int32_t sensorId, const int16_t value, uint32_t time); 
 	/**
@@ -157,7 +157,7 @@ public:
 	*
 	* @param	sensorId	Identifier of the sensor to get the data from.
 	*
-	* @return	The last data.
+	* @return	The last data value.
 	*/
 	int16_t getLastData(const int32_t sensorId);
 
@@ -211,7 +211,7 @@ public:
 	*
 	* @return	true if pin was found in EEPROM.
 	*/
-	bool EEPROMContainsPin(uint8_t pin);
+	bool EEPROMContainsPin(int8_t pin);
 
 	/**
 	* @fn	uint32_t CommonSense::time();

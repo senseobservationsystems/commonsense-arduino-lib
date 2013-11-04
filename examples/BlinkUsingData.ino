@@ -31,7 +31,7 @@ void setup(){
 
 	sense.createSensor("BlinkingLight", "LED", "arduinoled", -1, sensors, sensorsSize); // create a sensor on commonsense
 
-	timer = millis() - 70000UL; // set the timer to the current time
+	timer = millis() - 60000UL; // set the timer to the current time
 }
 
 
