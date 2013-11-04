@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">commonsense-arduino-lib
-   &#160;<span id="projectnumber">0.2.5</span>
+   &#160;<span id="projectnumber">0.3</span>
    </div>
   </td>
  </tr>
@@ -64,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -78,41 +78,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">commonsense-arduino-lib Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The Arduino IDE has a built-in function for installing libraries.</p>
-<p>Download the library as a zip file and extract it. Rename the resulting 'commonsense-arduino-lib-master' folder to '<a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>'.</p>
-<p>Go to <b>Sketch &gt; Import Library... &gt; Add Library...</b> and select the folder containing the library.</p>
-<p>If you're not using the Arduino Development Environment make sure the files are in a folder named '<a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>' and place the folder in your libraries folder.</p>
-<h2>Reference Documentation</h2>
-<p>Have a look at the <a href="http://senseobservationsystems.github.com/commonsense-arduino-lib/">library documentation</a> for more information. The API methods available to developers can be found on the <a href="http://www.sense-os.nl/developers">CommonSense Developers Pages</a>.</p>
-<h2>Examples</h2>
-<p>Sketch examples are included with this library. You can select one from <b>File &gt; Examples &gt; <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a></b>.</p>
-<h2>Usage</h2>
-<p>Let's get started by including the <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> library and its dependencies:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SPI.h&gt;</span> <span class="comment">// Library used by the CommonSense library</span></div>
-<div class="line"><span class="preprocessor">#include &lt;Ethernet.h&gt;</span> <span class="comment">// Library used by the CommonSense library </span></div>
-<div class="line"><span class="preprocessor">#include &lt;CommonSense.h&gt;</span> <span class="comment">// Our library itself</span></div>
-</div><!-- fragment --><p>We will need some information to connect and logon to <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>:</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *username = <span class="stringliteral">&quot;test&quot;</span>;</div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *password = <span class="stringliteral">&quot;098f6bcd4621d373cade4e832627b4f6&quot;</span>;</div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *deviceName = <span class="stringliteral">&quot;Arduino Uno&quot;</span>;</div>
-<div class="line"><span class="keyword">const</span> byte MAC[] = { 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF };</div>
-</div><!-- fragment --><p>We will also need to store the sensor identifier:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">long</span> pressure;</div>
-</div><!-- fragment --><p>Now it's time to create an object so we can talk to <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>:</p>
-<div class="fragment"><div class="line"><a class="code" href="class_common_sense.html">CommonSense</a> sense = <a class="code" href="class_common_sense.html">CommonSense</a>(username,password,deviceName,MAC);</div>
-</div><!-- fragment --><p>Now that's done, we should use <a class="el" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359" title="Sets up Ethernet, Time and calls CommonSense::login(). ">CommonSense::begin()</a> inside the setup() of the sketch. This function sets up ethernet and time to call CommonSense::login().</p>
-<div class="fragment"><div class="line">sense.<a class="code" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">begin</a>();</div>
-</div><!-- fragment --><p>With CommonSense::login() having saved the session id within the object, we can create the sensors in our <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> account.</p>
-<div class="fragment"><div class="line">pressure = sense.<a class="code" href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">createSensor</a>(<span class="stringliteral">&quot;Pressure&quot;</span>, <span class="stringliteral">&quot;P1 Pressure Sensor&quot;</span>, <span class="stringliteral">&quot;P1SEN&quot;</span>);</div>
-</div><!-- fragment --><p>We got our sensors up, now it's time to acquire data and upload it.</p>
-<div class="fragment"><div class="line">sense.<a class="code" href="class_common_sense.html#aa3f7abac99a0db4f4d70831a3dd1b171">uploadData</a>(pressure, analogRead(A0));</div>
-</div><!-- fragment --><p>Your data should now be visible in the sensor library.</p>
-<h2>License</h2>
-<p>Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a> </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 21 2013 10:30:26 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 4 2013 12:41:53 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

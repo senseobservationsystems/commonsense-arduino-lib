@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>commonsense-arduino-lib: CommonSense.h Source File</title>
+<title>commonsense-arduino-lib: C:/Users/Miguel/Documents/GitHub/commonsense-arduino-lib-IDE1.5/arch/avr/CommonSense.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">commonsense-arduino-lib
-   &#160;<span id="projectnumber">0.2.5</span>
+   &#160;<span id="projectnumber">0.3</span>
    </div>
   </td>
  </tr>
@@ -63,13 +63,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -78,6 +77,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ea9599923402ca8ab47fc3e495999dea.html">arch</a></li><li class="navelem"><a class="el" href="dir_641fb1c6345bf6e78093076f5c16d21a.html">avr</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CommonSense.h</div>  </div>
@@ -87,84 +91,119 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COMMONSENSE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;avr/pgmspace.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;SPI.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Ethernet.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;EthernetUdp.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_common_sense.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_common_sense.html">CommonSense</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_common_sense.html#a6469f195c8204ef8099ba9e58c12bea3">CommonSense</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *username, <span class="keyword">const</span> <span class="keywordtype">char</span> *password, <span class="keyword">const</span> <span class="keywordtype">char</span> *deviceName, <span class="keyword">const</span> byte *MAC);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">begin</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">createSensor</a>(<span class="keywordtype">char</span> *displayName, <span class="keywordtype">char</span> *deviceType, <span class="keywordtype">char</span> *name);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_common_sense.html#aa3f7abac99a0db4f4d70831a3dd1b171">uploadData</a>(<span class="keyword">const</span> <span class="keywordtype">long</span> sensorId, <span class="keyword">const</span> <span class="keywordtype">int</span> value, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="class_common_sense.html#a19e670fe8cd2a2d03d5ad9816fd4bb97">time</a>); </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_common_sense.html#ab1746cd24a55e2dca41a845b0fcc26a8">getLastData</a>(<span class="keyword">const</span> <span class="keywordtype">long</span> sensorId);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_common_sense.html#ae6d46bdc0676f820e8b6c35894a92521">deleteSensor</a>(<span class="keywordtype">long</span> sensorId);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="class_common_sense.html#a19e670fe8cd2a2d03d5ad9816fd4bb97">time</a>();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_common_sense.html#a830af1d027b84f51f02b503cec7e7ee0">sessionId</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *username_;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *password_;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *deviceName_;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">const</span> byte *MAC_;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">char</span> sessionId_[28];</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    EthernetUDP Udp;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    IPAddress timeServer;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> NTP_PACKET_SIZE;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> timeSinceStart;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> NTPTime;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">int</span> login();</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span>* parseResponse(<span class="keywordtype">int</span> request, <span class="keywordtype">int</span>* status, EthernetClient &amp;client);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> writeToClient(<span class="keyword">const</span> __FlashStringHelper *str, EthernetClient &amp;client);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">void</span> writeToClient(<span class="keywordtype">char</span> *str, EthernetClient &amp;client);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">int</span> writeHeadersToClient(EthernetClient &amp;client, <span class="keywordtype">int</span> length, <span class="keywordtype">bool</span> sessionRequired);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">int</span> setupTime();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> sendNTPpacket(IPAddress &amp;address);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> getNtpTime();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;avr/eeprom.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SPI.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Ethernet.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;EthernetUdp.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_common_sense.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_common_sense.html">CommonSense</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_common_sense.html#a6469f195c8204ef8099ba9e58c12bea3">CommonSense</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *username, <span class="keyword">const</span> <span class="keywordtype">char</span> *password, <span class="keyword">const</span> <span class="keywordtype">char</span> *deviceName, <span class="keyword">const</span> byte *MAC);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_common_sense.html#a6469f195c8204ef8099ba9e58c12bea3">CommonSense</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *username, <span class="keyword">const</span> <span class="keywordtype">char</span> *password, <span class="keyword">const</span> byte *MAC);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_common_sense.html#ae42286046d86c3b042f7ff19eb8de262">   58</a></span>&#160;    uint8_t <a class="code" href="class_common_sense.html#ae42286046d86c3b042f7ff19eb8de262">debug</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    int8_t <a class="code" href="class_common_sense.html#aa6e100340fd143471f92b8f78546a0f4">begin</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    int8_t <a class="code" href="class_common_sense.html#a1d1bd16956a232a79658551bd8e8ba31">createSensor</a>(<span class="keywordtype">char</span> *displayName, <span class="keywordtype">char</span> *deviceType, <span class="keywordtype">char</span> *name, uint8_t pin, int32_t *sensorArray, <span class="keywordtype">size_t</span> arraySize);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    int8_t <a class="code" href="class_common_sense.html#ab093213c126d7cbd4d90d40e996117b1">deleteSensor</a>(uint8_t elementNo, int32_t* sensorArray, <span class="keywordtype">size_t</span> arraySize);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    int8_t <a class="code" href="class_common_sense.html#abd929363327d1f31e83268b94729a08c">uploadData</a>(<span class="keyword">const</span> int32_t sensorId, <span class="keyword">const</span> int16_t value, uint32_t <a class="code" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3">time</a>); </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    int8_t <a class="code" href="class_common_sense.html#a1c7e5bb786c05c8e0f3c9c5af4056aa7">uploadDigitalData</a>(int32_t *sensorArrayElement);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    int8_t <a class="code" href="class_common_sense.html#a6963222a3f7ba6121ae9d2ed04d6f64c">uploadAnalogData</a>(int32_t *sensorArrayElement);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    int16_t <a class="code" href="class_common_sense.html#a0ab35d35e7f01d6aef210c159a7bfd14">getLastData</a>(<span class="keyword">const</span> int32_t sensorId);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    int8_t <a class="code" href="class_common_sense.html#aeddfc64e763316c7810de34f5a82a3c8">saveSensorsToEEPROM</a>(int32_t *sensorArray, <span class="keywordtype">size_t</span> arraySize);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    int8_t <a class="code" href="class_common_sense.html#aa7ed3e2ee432b4668f1b8eb37f211318">loadSensorsFromEEPROM</a>(int32_t *sensorArray, <span class="keywordtype">size_t</span> arraySize);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    int8_t <a class="code" href="class_common_sense.html#a41c59e86172ce1ba84d9368268759a18">clearEEPROM</a>();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_common_sense.html#a40dbdf4709185c1d985ddf56f33d1056">EEPROMContainsPin</a>(uint8_t pin);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    uint32_t <a class="code" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3">time</a>();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_common_sense.html#a830af1d027b84f51f02b503cec7e7ee0">sessionId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *username_;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *password_;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *deviceName_;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> server[] = <span class="stringliteral">&quot;api.sense-os.nl&quot;</span>;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_common_sense_html_a903d4f03f3480445f4ae7e11d1501849"><div class="ttname"><a href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">CommonSense::createSensor</a></div><div class="ttdeci">long createSensor(char *displayName, char *deviceType, char *name)</div><div class="ttdoc">Creates a sensor using the provided parameters. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00108">CommonSense.cpp:108</a></div></div>
-<div class="ttc" id="class_common_sense_html"><div class="ttname"><a href="class_common_sense.html">CommonSense</a></div><div class="ttdoc">Class containing variables and functions required for interacting with CommonSense. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8h_source.html#l00018">CommonSense.h:18</a></div></div>
-<div class="ttc" id="class_common_sense_html_ab1746cd24a55e2dca41a845b0fcc26a8"><div class="ttname"><a href="class_common_sense.html#ab1746cd24a55e2dca41a845b0fcc26a8">CommonSense::getLastData</a></div><div class="ttdeci">int getLastData(const long sensorId)</div><div class="ttdoc">Gets the latest data value for this sensor. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00295">CommonSense.cpp:295</a></div></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">const</span> byte *MAC_;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">char</span> sessionId_[28];</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    EthernetUDP Udp;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    IPAddress timeServer;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">const</span> uint8_t NTP_PACKET_SIZE;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    uint32_t timeSinceStart;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    uint32_t NTPTime;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    int16_t login();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">void</span>* parseResponse(uint8_t request, int16_t* status, EthernetClient &amp;client);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">void</span> writeToClient(<span class="keyword">const</span> __FlashStringHelper *str, EthernetClient &amp;client);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">void</span> writeToClient(<span class="keywordtype">char</span> *str, EthernetClient &amp;client);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">void</span> writeHeadersToClient(EthernetClient &amp;client, <span class="keywordtype">size_t</span> length, <span class="keywordtype">bool</span> sessionRequired);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    int8_t setupTime();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">void</span> sendNTPpacket(IPAddress &amp;address);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    uint32_t getNtpTime();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">bool</span> hasSpaceLeft(int32_t* arr, <span class="keywordtype">size_t</span> arraySize);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;};</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> server[] = <span class="stringliteral">&quot;api.sense-os.nl&quot;</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keyword">extern</span> int32_t EEMEM dataInEEPROM[];</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">//define eeprom size for this board</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EEPROM_MAX 512</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(__AVR_ATmega328P__)</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EEPROM_MAX 1024</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(__AVR_ATmega1280__)</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EEPROM_MAX 4096</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(__AVR_ATmega2560__)</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EEPROM_MAX 4096</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(__AVR_ATmega32U4__)</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EEPROM_MAX 4096</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(__SAM3X8E__)</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#error SAM3X8E does not have EEPROM</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_common_sense_html_aa7ed3e2ee432b4668f1b8eb37f211318"><div class="ttname"><a href="class_common_sense.html#aa7ed3e2ee432b4668f1b8eb37f211318">CommonSense::loadSensorsFromEEPROM</a></div><div class="ttdeci">int8_t loadSensorsFromEEPROM(int32_t *sensorArray, size_t arraySize)</div><div class="ttdoc">Loads sensors saved in EEPROM into the sensor array. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00322">CommonSense.cpp:322</a></div></div>
+<div class="ttc" id="class_common_sense_html_a1d1bd16956a232a79658551bd8e8ba31"><div class="ttname"><a href="class_common_sense.html#a1d1bd16956a232a79658551bd8e8ba31">CommonSense::createSensor</a></div><div class="ttdeci">int8_t createSensor(char *displayName, char *deviceType, char *name, uint8_t pin, int32_t *sensorArray, size_t arraySize)</div><div class="ttdoc">Creates a sensor on CommonSense and attempts to store the sensor id and mapped pin in sensorArray and...</div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00071">CommonSense.cpp:71</a></div></div>
+<div class="ttc" id="class_common_sense_html_a6963222a3f7ba6121ae9d2ed04d6f64c"><div class="ttname"><a href="class_common_sense.html#a6963222a3f7ba6121ae9d2ed04d6f64c">CommonSense::uploadAnalogData</a></div><div class="ttdeci">int8_t uploadAnalogData(int32_t *sensorArrayElement)</div><div class="ttdoc">Uploads data from an analog pin using the sensorArrayElement and time(). </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00246">CommonSense.cpp:246</a></div></div>
+<div class="ttc" id="class_common_sense_html"><div class="ttname"><a href="class_common_sense.html">CommonSense</a></div><div class="ttdoc">Class containing variables and functions required for interacting with CommonSense. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8h_source.html#l00019">CommonSense.h:19</a></div></div>
+<div class="ttc" id="class_common_sense_html_a0ab35d35e7f01d6aef210c159a7bfd14"><div class="ttname"><a href="class_common_sense.html#a0ab35d35e7f01d6aef210c159a7bfd14">CommonSense::getLastData</a></div><div class="ttdeci">int16_t getLastData(const int32_t sensorId)</div><div class="ttdoc">Gets the latest data value for this sensor. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00255">CommonSense.cpp:255</a></div></div>
 <div class="ttc" id="class_common_sense_html_a6469f195c8204ef8099ba9e58c12bea3"><div class="ttname"><a href="class_common_sense.html#a6469f195c8204ef8099ba9e58c12bea3">CommonSense::CommonSense</a></div><div class="ttdeci">CommonSense(const char *username, const char *password, const char *deviceName, const byte *MAC)</div><div class="ttdoc">Constructor used to provide essential information. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00003">CommonSense.cpp:3</a></div></div>
-<div class="ttc" id="class_common_sense_html_a830af1d027b84f51f02b503cec7e7ee0"><div class="ttname"><a href="class_common_sense.html#a830af1d027b84f51f02b503cec7e7ee0">CommonSense::sessionId</a></div><div class="ttdeci">const char * sessionId() const </div><div class="ttdoc">Gets the sessionId_ in this object. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00385">CommonSense.cpp:385</a></div></div>
-<div class="ttc" id="class_common_sense_html_aa3f7abac99a0db4f4d70831a3dd1b171"><div class="ttname"><a href="class_common_sense.html#aa3f7abac99a0db4f4d70831a3dd1b171">CommonSense::uploadData</a></div><div class="ttdeci">int uploadData(const long sensorId, const int value, unsigned long time)</div><div class="ttdoc">Uploads a value for this data point using the current time. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00239">CommonSense.cpp:239</a></div></div>
-<div class="ttc" id="class_common_sense_html_ae6d46bdc0676f820e8b6c35894a92521"><div class="ttname"><a href="class_common_sense.html#ae6d46bdc0676f820e8b6c35894a92521">CommonSense::deleteSensor</a></div><div class="ttdeci">int deleteSensor(long sensorId)</div><div class="ttdoc">Deletes the sensor with sensorId. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00183">CommonSense.cpp:183</a></div></div>
-<div class="ttc" id="class_common_sense_html_a7b92851f07d8e3df557045a65f1ff359"><div class="ttname"><a href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">CommonSense::begin</a></div><div class="ttdeci">int begin()</div><div class="ttdoc">Sets up Ethernet, Time and calls CommonSense::login(). </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00007">CommonSense.cpp:7</a></div></div>
-<div class="ttc" id="class_common_sense_html_a19e670fe8cd2a2d03d5ad9816fd4bb97"><div class="ttname"><a href="class_common_sense.html#a19e670fe8cd2a2d03d5ad9816fd4bb97">CommonSense::time</a></div><div class="ttdeci">unsigned long time()</div><div class="ttdoc">Gets the current unix time. This format is used for dates in the CommonSense platform. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00504">CommonSense.cpp:504</a></div></div>
+<div class="ttc" id="class_common_sense_html_a830af1d027b84f51f02b503cec7e7ee0"><div class="ttname"><a href="class_common_sense.html#a830af1d027b84f51f02b503cec7e7ee0">CommonSense::sessionId</a></div><div class="ttdeci">const char * sessionId() const </div><div class="ttdoc">Gets the sessionId_ in this object. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00402">CommonSense.cpp:402</a></div></div>
+<div class="ttc" id="class_common_sense_html_aa6e100340fd143471f92b8f78546a0f4"><div class="ttname"><a href="class_common_sense.html#aa6e100340fd143471f92b8f78546a0f4">CommonSense::begin</a></div><div class="ttdeci">int8_t begin()</div><div class="ttdoc">Sets up ethernet, time and calls CommonSense::login(). </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00011">CommonSense.cpp:11</a></div></div>
+<div class="ttc" id="class_common_sense_html_ae42286046d86c3b042f7ff19eb8de262"><div class="ttname"><a href="class_common_sense.html#ae42286046d86c3b042f7ff19eb8de262">CommonSense::debug</a></div><div class="ttdeci">uint8_t debug</div><div class="ttdoc">Digit used to set the amount of printing done to the serial monitor. 0 = no printing 1 = status codes...</div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8h_source.html#l00058">CommonSense.h:58</a></div></div>
+<div class="ttc" id="class_common_sense_html_a1fe301cf21e8fd6efa3f4c19a86d09f3"><div class="ttname"><a href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3">CommonSense::time</a></div><div class="ttdeci">uint32_t time()</div><div class="ttdoc">Gets the current unix time. This format is used for dates in the CommonSense platform. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00524">CommonSense.cpp:524</a></div></div>
+<div class="ttc" id="class_common_sense_html_a1c7e5bb786c05c8e0f3c9c5af4056aa7"><div class="ttname"><a href="class_common_sense.html#a1c7e5bb786c05c8e0f3c9c5af4056aa7">CommonSense::uploadDigitalData</a></div><div class="ttdeci">int8_t uploadDigitalData(int32_t *sensorArrayElement)</div><div class="ttdoc">Uploads data from a digital pin using the sensorArrayElement and time(). </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00237">CommonSense.cpp:237</a></div></div>
+<div class="ttc" id="class_common_sense_html_a40dbdf4709185c1d985ddf56f33d1056"><div class="ttname"><a href="class_common_sense.html#a40dbdf4709185c1d985ddf56f33d1056">CommonSense::EEPROMContainsPin</a></div><div class="ttdeci">bool EEPROMContainsPin(uint8_t pin)</div><div class="ttdoc">Checks if the EEPROM already contains pin. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00370">CommonSense.cpp:370</a></div></div>
+<div class="ttc" id="class_common_sense_html_abd929363327d1f31e83268b94729a08c"><div class="ttname"><a href="class_common_sense.html#abd929363327d1f31e83268b94729a08c">CommonSense::uploadData</a></div><div class="ttdeci">int8_t uploadData(const int32_t sensorId, const int16_t value, uint32_t time)</div><div class="ttdoc">Uploads a value for this data point using the current time. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00196">CommonSense.cpp:196</a></div></div>
+<div class="ttc" id="class_common_sense_html_a41c59e86172ce1ba84d9368268759a18"><div class="ttname"><a href="class_common_sense.html#a41c59e86172ce1ba84d9368268759a18">CommonSense::clearEEPROM</a></div><div class="ttdeci">int8_t clearEEPROM()</div><div class="ttdoc">Clears the EEPROM. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00348">CommonSense.cpp:348</a></div></div>
+<div class="ttc" id="class_common_sense_html_aeddfc64e763316c7810de34f5a82a3c8"><div class="ttname"><a href="class_common_sense.html#aeddfc64e763316c7810de34f5a82a3c8">CommonSense::saveSensorsToEEPROM</a></div><div class="ttdeci">int8_t saveSensorsToEEPROM(int32_t *sensorArray, size_t arraySize)</div><div class="ttdoc">Saves the sensor array to EEPROM. </div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00287">CommonSense.cpp:287</a></div></div>
+<div class="ttc" id="class_common_sense_html_ab093213c126d7cbd4d90d40e996117b1"><div class="ttname"><a href="class_common_sense.html#ab093213c126d7cbd4d90d40e996117b1">CommonSense::deleteSensor</a></div><div class="ttdeci">int8_t deleteSensor(uint8_t elementNo, int32_t *sensorArray, size_t arraySize)</div><div class="ttdoc">Deletes the sensor stored at elementNo in sensorArray from CommonSense and erases it from EEPROM...</div><div class="ttdef"><b>Definition:</b> <a href="_common_sense_8cpp_source.html#l00159">CommonSense.cpp:159</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 21 2013 10:30:26 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 4 2013 12:41:52 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

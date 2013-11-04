@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getlastdata',['getLastData',['../class_common_sense.html#ab1746cd24a55e2dca41a845b0fcc26a8',1,'CommonSense']]]
+  ['getlastdata',['getLastData',['../class_common_sense.html#a0ab35d35e7f01d6aef210c159a7bfd14',1,'CommonSense']]]
 ];

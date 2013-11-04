@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">commonsense-arduino-lib
-   &#160;<span id="projectnumber">0.2.5</span>
+   &#160;<span id="projectnumber">0.3</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,18 +88,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_common_sense.html">CommonSense</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">begin</a>()</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_common_sense.html#a6469f195c8204ef8099ba9e58c12bea3">CommonSense</a>(const char *username, const char *password, const char *deviceName, const byte *MAC)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">createSensor</a>(char *displayName, char *deviceType, char *name)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_common_sense.html#ae6d46bdc0676f820e8b6c35894a92521">deleteSensor</a>(long sensorId)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#ab1746cd24a55e2dca41a845b0fcc26a8">getLastData</a>(const long sensorId)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#aa6e100340fd143471f92b8f78546a0f4">begin</a>()</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_common_sense.html#a41c59e86172ce1ba84d9368268759a18">clearEEPROM</a>()</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#a6469f195c8204ef8099ba9e58c12bea3">CommonSense</a>(const char *username, const char *password, const char *deviceName, const byte *MAC)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_common_sense.html#a4bda72bf78a545852ee5a68258c9df95">CommonSense</a>(const char *username, const char *password, const byte *MAC)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#a1d1bd16956a232a79658551bd8e8ba31">createSensor</a>(char *displayName, char *deviceType, char *name, uint8_t pin, int32_t *sensorArray, size_t arraySize)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_common_sense.html#ae42286046d86c3b042f7ff19eb8de262">debug</a></td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#ab093213c126d7cbd4d90d40e996117b1">deleteSensor</a>(uint8_t elementNo, int32_t *sensorArray, size_t arraySize)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_common_sense.html#a40dbdf4709185c1d985ddf56f33d1056">EEPROMContainsPin</a>(uint8_t pin)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#a0ab35d35e7f01d6aef210c159a7bfd14">getLastData</a>(const int32_t sensorId)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_common_sense.html#aa7ed3e2ee432b4668f1b8eb37f211318">loadSensorsFromEEPROM</a>(int32_t *sensorArray, size_t arraySize)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#aeddfc64e763316c7810de34f5a82a3c8">saveSensorsToEEPROM</a>(int32_t *sensorArray, size_t arraySize)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_common_sense.html#a830af1d027b84f51f02b503cec7e7ee0">sessionId</a>() const </td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#a19e670fe8cd2a2d03d5ad9816fd4bb97">time</a>()</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_common_sense.html#aa3f7abac99a0db4f4d70831a3dd1b171">uploadData</a>(const long sensorId, const int value, unsigned long time)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3">time</a>()</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_common_sense.html#a6963222a3f7ba6121ae9d2ed04d6f64c">uploadAnalogData</a>(int32_t *sensorArrayElement)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_common_sense.html#abd929363327d1f31e83268b94729a08c">uploadData</a>(const int32_t sensorId, const int16_t value, uint32_t time)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_common_sense.html#a1c7e5bb786c05c8e0f3c9c5af4056aa7">uploadDigitalData</a>(int32_t *sensorArrayElement)</td><td class="entry"><a class="el" href="class_common_sense.html">CommonSense</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 21 2013 10:30:26 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 4 2013 12:41:53 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

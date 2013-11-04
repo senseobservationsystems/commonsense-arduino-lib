@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">commonsense-arduino-lib
-   &#160;<span id="projectnumber">0.2.5</span>
+   &#160;<span id="projectnumber">0.3</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,6 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_common_sense-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CommonSense Class Reference</div>  </div>
@@ -99,34 +100,62 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6469f195c8204ef8099ba9e58c12bea3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a6469f195c8204ef8099ba9e58c12bea3">CommonSense</a> (const char *username, const char *password, const char *deviceName, const byte *MAC)</td></tr>
 <tr class="memdesc:a6469f195c8204ef8099ba9e58c12bea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor used to provide essential information.  <a href="#a6469f195c8204ef8099ba9e58c12bea3">More...</a><br/></td></tr>
 <tr class="separator:a6469f195c8204ef8099ba9e58c12bea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b92851f07d8e3df557045a65f1ff359"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a7b92851f07d8e3df557045a65f1ff359">begin</a> ()</td></tr>
-<tr class="memdesc:a7b92851f07d8e3df557045a65f1ff359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up Ethernet, Time and calls CommonSense::login().  <a href="#a7b92851f07d8e3df557045a65f1ff359">More...</a><br/></td></tr>
-<tr class="separator:a7b92851f07d8e3df557045a65f1ff359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a903d4f03f3480445f4ae7e11d1501849"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a903d4f03f3480445f4ae7e11d1501849">createSensor</a> (char *displayName, char *deviceType, char *name)</td></tr>
-<tr class="memdesc:a903d4f03f3480445f4ae7e11d1501849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a sensor using the provided parameters.  <a href="#a903d4f03f3480445f4ae7e11d1501849">More...</a><br/></td></tr>
-<tr class="separator:a903d4f03f3480445f4ae7e11d1501849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3f7abac99a0db4f4d70831a3dd1b171"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#aa3f7abac99a0db4f4d70831a3dd1b171">uploadData</a> (const long sensorId, const int value, unsigned long <a class="el" href="class_common_sense.html#a19e670fe8cd2a2d03d5ad9816fd4bb97">time</a>)</td></tr>
-<tr class="memdesc:aa3f7abac99a0db4f4d70831a3dd1b171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploads a value for this data point using the current time.  <a href="#aa3f7abac99a0db4f4d70831a3dd1b171">More...</a><br/></td></tr>
-<tr class="separator:aa3f7abac99a0db4f4d70831a3dd1b171"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1746cd24a55e2dca41a845b0fcc26a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#ab1746cd24a55e2dca41a845b0fcc26a8">getLastData</a> (const long sensorId)</td></tr>
-<tr class="memdesc:ab1746cd24a55e2dca41a845b0fcc26a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the latest data value for this sensor.  <a href="#ab1746cd24a55e2dca41a845b0fcc26a8">More...</a><br/></td></tr>
-<tr class="separator:ab1746cd24a55e2dca41a845b0fcc26a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6d46bdc0676f820e8b6c35894a92521"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#ae6d46bdc0676f820e8b6c35894a92521">deleteSensor</a> (long sensorId)</td></tr>
-<tr class="memdesc:ae6d46bdc0676f820e8b6c35894a92521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the sensor with sensorId.  <a href="#ae6d46bdc0676f820e8b6c35894a92521">More...</a><br/></td></tr>
-<tr class="separator:ae6d46bdc0676f820e8b6c35894a92521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e670fe8cd2a2d03d5ad9816fd4bb97"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a19e670fe8cd2a2d03d5ad9816fd4bb97">time</a> ()</td></tr>
-<tr class="memdesc:a19e670fe8cd2a2d03d5ad9816fd4bb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current unix time. This format is used for dates in the <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> platform.  <a href="#a19e670fe8cd2a2d03d5ad9816fd4bb97">More...</a><br/></td></tr>
-<tr class="separator:a19e670fe8cd2a2d03d5ad9816fd4bb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bda72bf78a545852ee5a68258c9df95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a4bda72bf78a545852ee5a68258c9df95">CommonSense</a> (const char *username, const char *password, const byte *MAC)</td></tr>
+<tr class="memdesc:a4bda72bf78a545852ee5a68258c9df95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor used to provide essential information.  <a href="#a4bda72bf78a545852ee5a68258c9df95">More...</a><br/></td></tr>
+<tr class="separator:a4bda72bf78a545852ee5a68258c9df95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e100340fd143471f92b8f78546a0f4"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#aa6e100340fd143471f92b8f78546a0f4">begin</a> ()</td></tr>
+<tr class="memdesc:aa6e100340fd143471f92b8f78546a0f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up ethernet, time and calls CommonSense::login().  <a href="#aa6e100340fd143471f92b8f78546a0f4">More...</a><br/></td></tr>
+<tr class="separator:aa6e100340fd143471f92b8f78546a0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d1bd16956a232a79658551bd8e8ba31"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a1d1bd16956a232a79658551bd8e8ba31">createSensor</a> (char *displayName, char *deviceType, char *name, uint8_t pin, int32_t *sensorArray, size_t arraySize)</td></tr>
+<tr class="memdesc:a1d1bd16956a232a79658551bd8e8ba31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a sensor on <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> and attempts to store the sensor id and mapped pin in sensorArray and EEPROM.  <a href="#a1d1bd16956a232a79658551bd8e8ba31">More...</a><br/></td></tr>
+<tr class="separator:a1d1bd16956a232a79658551bd8e8ba31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab093213c126d7cbd4d90d40e996117b1"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#ab093213c126d7cbd4d90d40e996117b1">deleteSensor</a> (uint8_t elementNo, int32_t *sensorArray, size_t arraySize)</td></tr>
+<tr class="memdesc:ab093213c126d7cbd4d90d40e996117b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the sensor stored at elementNo in sensorArray from <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> and erases it from EEPROM.  <a href="#ab093213c126d7cbd4d90d40e996117b1">More...</a><br/></td></tr>
+<tr class="separator:ab093213c126d7cbd4d90d40e996117b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd929363327d1f31e83268b94729a08c"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#abd929363327d1f31e83268b94729a08c">uploadData</a> (const int32_t sensorId, const int16_t value, uint32_t <a class="el" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3">time</a>)</td></tr>
+<tr class="memdesc:abd929363327d1f31e83268b94729a08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploads a value for this data point using the current time.  <a href="#abd929363327d1f31e83268b94729a08c">More...</a><br/></td></tr>
+<tr class="separator:abd929363327d1f31e83268b94729a08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7e5bb786c05c8e0f3c9c5af4056aa7"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a1c7e5bb786c05c8e0f3c9c5af4056aa7">uploadDigitalData</a> (int32_t *sensorArrayElement)</td></tr>
+<tr class="memdesc:a1c7e5bb786c05c8e0f3c9c5af4056aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploads data from a digital pin using the sensorArrayElement and <a class="el" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3" title="Gets the current unix time. This format is used for dates in the CommonSense platform. ">time()</a>.  <a href="#a1c7e5bb786c05c8e0f3c9c5af4056aa7">More...</a><br/></td></tr>
+<tr class="separator:a1c7e5bb786c05c8e0f3c9c5af4056aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6963222a3f7ba6121ae9d2ed04d6f64c"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a6963222a3f7ba6121ae9d2ed04d6f64c">uploadAnalogData</a> (int32_t *sensorArrayElement)</td></tr>
+<tr class="memdesc:a6963222a3f7ba6121ae9d2ed04d6f64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploads data from an analog pin using the sensorArrayElement and <a class="el" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3" title="Gets the current unix time. This format is used for dates in the CommonSense platform. ">time()</a>.  <a href="#a6963222a3f7ba6121ae9d2ed04d6f64c">More...</a><br/></td></tr>
+<tr class="separator:a6963222a3f7ba6121ae9d2ed04d6f64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab35d35e7f01d6aef210c159a7bfd14"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a0ab35d35e7f01d6aef210c159a7bfd14">getLastData</a> (const int32_t sensorId)</td></tr>
+<tr class="memdesc:a0ab35d35e7f01d6aef210c159a7bfd14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the latest data value for this sensor.  <a href="#a0ab35d35e7f01d6aef210c159a7bfd14">More...</a><br/></td></tr>
+<tr class="separator:a0ab35d35e7f01d6aef210c159a7bfd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeddfc64e763316c7810de34f5a82a3c8"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#aeddfc64e763316c7810de34f5a82a3c8">saveSensorsToEEPROM</a> (int32_t *sensorArray, size_t arraySize)</td></tr>
+<tr class="memdesc:aeddfc64e763316c7810de34f5a82a3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the sensor array to EEPROM.  <a href="#aeddfc64e763316c7810de34f5a82a3c8">More...</a><br/></td></tr>
+<tr class="separator:aeddfc64e763316c7810de34f5a82a3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ed3e2ee432b4668f1b8eb37f211318"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#aa7ed3e2ee432b4668f1b8eb37f211318">loadSensorsFromEEPROM</a> (int32_t *sensorArray, size_t arraySize)</td></tr>
+<tr class="memdesc:aa7ed3e2ee432b4668f1b8eb37f211318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads sensors saved in EEPROM into the sensor array.  <a href="#aa7ed3e2ee432b4668f1b8eb37f211318">More...</a><br/></td></tr>
+<tr class="separator:aa7ed3e2ee432b4668f1b8eb37f211318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c59e86172ce1ba84d9368268759a18"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a41c59e86172ce1ba84d9368268759a18">clearEEPROM</a> ()</td></tr>
+<tr class="memdesc:a41c59e86172ce1ba84d9368268759a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the EEPROM.  <a href="#a41c59e86172ce1ba84d9368268759a18">More...</a><br/></td></tr>
+<tr class="separator:a41c59e86172ce1ba84d9368268759a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40dbdf4709185c1d985ddf56f33d1056"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a40dbdf4709185c1d985ddf56f33d1056">EEPROMContainsPin</a> (uint8_t pin)</td></tr>
+<tr class="memdesc:a40dbdf4709185c1d985ddf56f33d1056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the EEPROM already contains pin.  <a href="#a40dbdf4709185c1d985ddf56f33d1056">More...</a><br/></td></tr>
+<tr class="separator:a40dbdf4709185c1d985ddf56f33d1056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe301cf21e8fd6efa3f4c19a86d09f3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3">time</a> ()</td></tr>
+<tr class="memdesc:a1fe301cf21e8fd6efa3f4c19a86d09f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current unix time. This format is used for dates in the <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> platform.  <a href="#a1fe301cf21e8fd6efa3f4c19a86d09f3">More...</a><br/></td></tr>
+<tr class="separator:a1fe301cf21e8fd6efa3f4c19a86d09f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830af1d027b84f51f02b503cec7e7ee0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#a830af1d027b84f51f02b503cec7e7ee0">sessionId</a> () const </td></tr>
 <tr class="memdesc:a830af1d027b84f51f02b503cec7e7ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the sessionId_ in this object.  <a href="#a830af1d027b84f51f02b503cec7e7ee0">More...</a><br/></td></tr>
 <tr class="separator:a830af1d027b84f51f02b503cec7e7ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae42286046d86c3b042f7ff19eb8de262"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae42286046d86c3b042f7ff19eb8de262"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_common_sense.html#ae42286046d86c3b042f7ff19eb8de262">debug</a></td></tr>
+<tr class="memdesc:ae42286046d86c3b042f7ff19eb8de262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Digit used to set the amount of printing done to the serial monitor. 0 = no printing 1 = status codes and error messages 2 = full responses. <br/></td></tr>
+<tr class="separator:ae42286046d86c3b042f7ff19eb8de262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class containing variables and functions required for interacting with <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>01/10/2013 </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8h_source.html#l00018">18</a> of file <a class="el" href="_common_sense_8h_source.html">CommonSense.h</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8h_source.html#l00019">19</a> of file <a class="el" href="_common_sense_8h_source.html">CommonSense.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6469f195c8204ef8099ba9e58c12bea3"></a>
 <div class="memitem">
@@ -181,13 +210,59 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a7b92851f07d8e3df557045a65f1ff359"></a>
+<a class="anchor" id="a4bda72bf78a545852ee5a68258c9df95"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int CommonSense::begin </td>
+          <td class="memname">CommonSense::CommonSense </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const byte *&#160;</td>
+          <td class="paramname"><em>MAC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor used to provide essential information. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>04/11/2013</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Your <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> username. </td></tr>
+    <tr><td class="paramname">password</td><td>MD5 hash of your password. </td></tr>
+    <tr><td class="paramname">MAC</td><td>The MAC address of your Arduino. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00007">7</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa6e100340fd143471f92b8f78546a0f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t CommonSense::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -195,21 +270,43 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets up Ethernet, Time and calls CommonSense::login(). </p>
+<p>Sets up ethernet, time and calls CommonSense::login(). </p>
 <dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>01/10/2013</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The response code from CommonSense::login(). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if successful. </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00007">7</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00011">11</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a903d4f03f3480445f4ae7e11d1501849"></a>
+<a class="anchor" id="a41c59e86172ce1ba84d9368268759a18"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long CommonSense::createSensor </td>
+          <td class="memname">int8_t CommonSense::clearEEPROM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the EEPROM. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if successfully erased all bytes of the EEPROM. </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00348">348</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d1bd16956a232a79658551bd8e8ba31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t CommonSense::createSensor </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>displayName</em>, </td>
@@ -224,7 +321,25 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>sensorArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>arraySize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -234,60 +349,104 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a sensor using the provided parameters. </p>
+<p>Creates a sensor on <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> and attempts to store the sensor id and mapped pin in sensorArray and EEPROM. </p>
 <dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>01/10/2013</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">displayName</td><td>The "Name" displayed in the sensor library on <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deviceType</td><td>The description displayed in the sensor library. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Internal name no visible in the sensor library.</td></tr>
+    <tr><td class="paramname">displayName</td><td>The "Name" displayed in the sensor library on <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a>. </td></tr>
+    <tr><td class="paramname">deviceType</td><td>The description displayed in the sensor library. </td></tr>
+    <tr><td class="paramname">name</td><td>Internal name not visible in the sensor library. </td></tr>
+    <tr><td class="paramname">pin</td><td>The pin this sensor is supposed to read. </td></tr>
+    <tr><td class="paramname">sensorArray</td><td>The sensor array where the id and pin are stored (for burning to EEPROM). </td></tr>
+    <tr><td class="paramname">arraySize</td><td>Amount of elements in sensorArray.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The new sensor id if created successfully or the response status. In case of connection failure, 1 is returned. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the id and pin are successfully stored in the sensorArray and EEPROM. </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00108">108</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00071">71</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae6d46bdc0676f820e8b6c35894a92521"></a>
+<a class="anchor" id="ab093213c126d7cbd4d90d40e996117b1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int CommonSense::deleteSensor </td>
+          <td class="memname">int8_t CommonSense::deleteSensor </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>sensorId</em></td><td>)</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>elementNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>sensorArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>arraySize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes the sensor stored at elementNo in sensorArray from <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> and erases it from EEPROM. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elementNo</td><td>Number of the element (sensor id) to be removed. </td></tr>
+    <tr><td class="paramname">sensorArray</td><td>The sensor array where the id and pin are stored. </td></tr>
+    <tr><td class="paramname">arraySize</td><td>Amount of elements in sensorArray.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the sensor was successfully deleted from <a class="el" href="class_common_sense.html" title="Class containing variables and functions required for interacting with CommonSense. ">CommonSense</a> and EEPROM. </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00159">159</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40dbdf4709185c1d985ddf56f33d1056"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CommonSense::EEPROMContainsPin </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Deletes the sensor with sensorId. </p>
+<p>Checks if the EEPROM already contains pin. </p>
 <dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>01/10/2013</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sensorId</td><td>Identifier for the sensor.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The response status code from the API. In case of connection failure, 1 is returned. </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if pin was found in EEPROM. </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00183">183</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00370">370</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab1746cd24a55e2dca41a845b0fcc26a8"></a>
+<a class="anchor" id="a0ab35d35e7f01d6aef210c159a7bfd14"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int CommonSense::getLastData </td>
+          <td class="memname">int16_t CommonSense::getLastData </td>
           <td>(</td>
-          <td class="paramtype">const long&#160;</td>
+          <td class="paramtype">const int32_t&#160;</td>
           <td class="paramname"><em>sensorId</em></td><td>)</td>
           <td></td>
         </tr>
@@ -305,7 +464,87 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The last data. </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00295">295</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00255">255</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7ed3e2ee432b4668f1b8eb37f211318"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t CommonSense::loadSensorsFromEEPROM </td>
+          <td>(</td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>sensorArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>arraySize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads sensors saved in EEPROM into the sensor array. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">sensorArray</td><td>The SRAM array to write the EEPROM array to. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">arraySize</td><td>Size of the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The sensors from eeprom. </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00322">322</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeddfc64e763316c7810de34f5a82a3c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t CommonSense::saveSensorsToEEPROM </td>
+          <td>(</td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>sensorArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>arraySize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves the sensor array to EEPROM. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sensorArray</td><td>The SRAM array to be written to EEPROM. </td></tr>
+    <tr><td class="paramname">arraySize</td><td>Size of the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if successfully wrote the array to EEPROM. </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00287">287</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
@@ -327,16 +566,16 @@ Public Member Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>01/10/2013</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A copy of the sessionId_ in this object. </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00385">385</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00402">402</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a19e670fe8cd2a2d03d5ad9816fd4bb97"></a>
+<a class="anchor" id="a1fe301cf21e8fd6efa3f4c19a86d09f3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long CommonSense::time </td>
+          <td class="memname">uint32_t CommonSense::time </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -349,30 +588,59 @@ Public Member Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>16/10/2013</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount of seconds since 00:00:00 UTC, 1 January 1970 </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00504">504</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00524">524</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa3f7abac99a0db4f4d70831a3dd1b171"></a>
+<a class="anchor" id="a6963222a3f7ba6121ae9d2ed04d6f64c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int CommonSense::uploadData </td>
+          <td class="memname">int8_t CommonSense::uploadAnalogData </td>
           <td>(</td>
-          <td class="paramtype">const long&#160;</td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>sensorArrayElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uploads data from an analog pin using the sensorArrayElement and <a class="el" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3" title="Gets the current unix time. This format is used for dates in the CommonSense platform. ">time()</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sensorArrayElement</td><td>Pointer to the sensor id in the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if uploading the data was successful. </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00246">246</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd929363327d1f31e83268b94729a08c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t CommonSense::uploadData </td>
+          <td>(</td>
+          <td class="paramtype">const int32_t&#160;</td>
           <td class="paramname"><em>sensorId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
+          <td class="paramtype">const int16_t&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>time</em>&#160;</td>
         </tr>
         <tr>
@@ -396,18 +664,47 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The response status code from the API. In case of connection failure, 1 is returned. </dd></dl>
 
-<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00239">239</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00196">196</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c7e5bb786c05c8e0f3c9c5af4056aa7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t CommonSense::uploadDigitalData </td>
+          <td>(</td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>sensorArrayElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uploads data from a digital pin using the sensorArrayElement and <a class="el" href="class_common_sense.html#a1fe301cf21e8fd6efa3f4c19a86d09f3" title="Gets the current unix time. This format is used for dates in the CommonSense platform. ">time()</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Miguel </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/2013</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sensorArrayElement</td><td>Pointer to the sensor id in the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if uploading the data was successful. </dd></dl>
+
+<p>Definition at line <a class="el" href="_common_sense_8cpp_source.html#l00237">237</a> of file <a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_common_sense_8h_source.html">CommonSense.h</a></li>
-<li><a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a></li>
+<li>C:/Users/Miguel/Documents/GitHub/commonsense-arduino-lib-IDE1.5/arch/avr/<a class="el" href="_common_sense_8h_source.html">CommonSense.h</a></li>
+<li>C:/Users/Miguel/Documents/GitHub/commonsense-arduino-lib-IDE1.5/arch/avr/<a class="el" href="_common_sense_8cpp_source.html">CommonSense.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 21 2013 10:30:26 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 4 2013 12:41:53 for commonsense-arduino-lib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
